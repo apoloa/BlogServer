@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for blog in object_list %}
+    {{ blog.name }}
+{% endfor %}
+{% endblock %}
+
+
+
