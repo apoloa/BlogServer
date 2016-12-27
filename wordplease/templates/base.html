@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load staticfiles %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Postium</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+    </nav>
+</header>
+{% block body %}{% endblock %}
+</body>
+</html>
