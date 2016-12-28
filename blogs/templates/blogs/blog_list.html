@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
-{% block body %}
-{% for blog in object_list %}
-    {{ blog.name }}
-{% endfor %}
+{% load staticfiles %}
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/blog-list/blog_list.css' %}">
+{% endblock %}
+{% block section %}
+    <h1>Blog List</h1>
+    <div class="row">
+        {% for blog in object_list %}
+            <div class="col-xs-6 col-sm-4">
+                <div class="thumbnail blog-miniature">
+                    <img src="{{ blog.get_url_image }}" alt="image-blog">
+                    <div class="caption">
+                        <h3>{{ blog.name }}</h3>
+                        <h4>by {{ blog.owner.first_name }} {{ blog.owner.last_name }}</h4>
+                        <hr>
+                        <p>{{ blog.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
 
 

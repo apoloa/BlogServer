@@ -1,1 +1,14 @@
-body { padding-top: 70px; }
+body {
+    padding-top: 70px;
+    background-color: #FAFAFA;
+}
+
+.navbar-brand-image{
+    padding-left: 20px;
+}
+
+.navbar-brand-image img{
+    height: 45px;
+    padding: 6px;
+    position: relative;
+}

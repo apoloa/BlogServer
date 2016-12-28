@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    {% block header %}{% endblock %}
 </head>
 <body>
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
-
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand-image" href="#"><img id="" src="{% static 'img/logo.svg' %}" alt="Postium"></a>
+            </div>
+        </div>
     </nav>
 </header>
-{% block body %}{% endblock %}
+<div class="container">
+    {% block section %}{% endblock %}
+</div>
+
 </body>
 </html>
